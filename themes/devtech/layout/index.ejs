@@ -1,0 +1,40 @@
+<% page.posts.each(function(post) { %>
+  <article class="post-item">
+    <div class="post-meta">
+      <time datetime="<%= date(post.date, 'YYYY-MM-DD') %>">
+        <%= date(post.date, 'MMM D, YYYY') %>
+      </time>
+    </div>
+    <h2 class="post-title">
+      <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+    </h2>
+    <div class="post-excerpt">
+      <%- post.excerpt || post.description || post.content.substring(0, 200) + '...' %>
+    </div>
+    <% if (post.tags && post.tags.length) { %>
+      <div class="post-tags">
+        <% post.tags.each(function(tag) { %>
+          <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+        <% }) %>
+      </div>
+    <% } %>
+  </article>
+<% }) %>
+
+<% if (page.total > 1) { %>
+  <nav class="pagination">
+    <% if (page.prev) { %>
+      <a href="<%= url_for(page.prev_link) %>">← Previous</a>
+    <% } %>
+    <% for (var i = 1; i <= page.total; i++) { %>
+      <% if (i === page.current) { %>
+        <span class="current"><%= i %></span>
+      <% } else { %>
+        <a href="<%= url_for(page.base + (i === 1 ? '' : i + '/')) %>"><%= i %></a>
+      <% } %>
+    <% } %>
+    <% if (page.next) { %>
+      <a href="<%= url_for(page.next_link) %>">Next →</a>
+    <% } %>
+  </nav>
+<% } %>

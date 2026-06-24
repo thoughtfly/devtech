@@ -1,0 +1,16 @@
+<article class="post-content">
+  <h1><%= page.title %></h1>
+  <div class="post-meta" style="margin-bottom: 24px;">
+    <time datetime="<%= date(page.date, 'YYYY-MM-DD') %>">
+      <%= date(page.date, 'MMMM D, YYYY') %>
+    </time>
+    <% if (page.tags && page.tags.length) { %>
+      <span style="margin: 0 8px">·</span>
+      <% page.tags.each(function(tag) { %>
+        <a href="<%= url_for(tag.path) %>" style="font-size: 0.85rem; margin-right: 8px;"><%= tag.name %></a>
+      <% }) %>
+    <% } %>
+  </div>
+
+  <%- page.content %>
+</article>

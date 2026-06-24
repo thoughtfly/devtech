@@ -1,0 +1,108 @@
+name: 🤖 Auto Blog - Generate & Deploy
+
+on:
+  schedule:
+    # Run daily at 08:00 UTC (16:00 CST)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of posts to generate'
+        required: true
+        default: '1'
+        type: string
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    outputs:
+      has_new_posts: ${{ steps.check_changes.outputs.has_new_posts }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Generate blog posts
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          COUNT="${{ inputs.count || '1' }}"
+          python generator/generate_posts.py --count "$COUNT"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "has_new_posts=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_new_posts=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit new posts
+        if: steps.check_changes.outputs.has_new_posts == 'true'
+        run: |
+          git config user.name "devtech-bot"
+          git config user.email "bot@devtech-blog.com"
+          git add source/_posts/ generator/.topic_history.json
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M UTC")
+          git commit -m "auto: generate blog posts - ${TIMESTAMP}"
+          git push
+
+  build-and-deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    # Always build (even if no new posts, to rebuild from cache/theme updates)
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Hexo dependencies
+        run: |
+          npm install
+
+      - name: Build static site
+        run: |
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

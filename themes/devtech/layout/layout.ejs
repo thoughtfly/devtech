@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= config.description %>">
+  <meta name="keywords" content="<%= config.keywords %>">
+
+  <title><%= page.title ? page.title + ' | ' + config.title : config.title %></title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="<%= page.title || config.title %>">
+  <meta property="og:description" content="<%= page.description || config.description %>">
+  <meta property="og:type" content="<%= page.type || 'website' %>">
+  <meta property="og:url" content="<%= config.url %><%= page.path %>">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="<%= config.url %>/<%= page.path %>">
+
+  <!-- RSS (future use) -->
+  <link rel="alternate" type="application/rss+xml" title="<%= config.title %>" href="/atom.xml">
+
+  <style>
+    :root {
+      --brand: #2563eb;
+      --brand-light: #3b82f6;
+      --bg: #ffffff;
+      --bg-off: #f8fafc;
+      --text: #1e293b;
+      --text-secondary: #64748b;
+      --border: #e2e8f0;
+      --code-bg: #f1f5f9;
+      --max-width: 720px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .site-title:hover { color: var(--brand); }
+
+    nav a {
+      margin-left: 24px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--brand); }
+
+    /* Post list (index) */
+    .post-item {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-item:last-child { border-bottom: none; }
+
+    .post-meta {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .post-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .post-title a:hover { color: var(--brand); }
+
+    .post-excerpt {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .post-tags { margin-top: 10px; }
+
+    .post-tags a {
+      display: inline-block;
+      padding: 2px 10px;
+      margin: 0 4px 4px 0;
+      font-size: 0.8rem;
+      color: var(--brand);
+      background: #eff6ff;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .post-tags a:hover { background: #dbeafe; }
+
+    /* Single post */
+    .post-content { font-size: 1rem; }
+    .post-content h2 { font-size: 1.4rem; margin: 36px 0 16px; }
+    .post-content h3 { font-size: 1.15rem; margin: 28px 0 12px; }
+    .post-content p { margin-bottom: 16px; }
+    .post-content ul, .post-content ol { margin-bottom: 16px; padding-left: 24px; }
+    .post-content li { margin-bottom: 6px; }
+
+    .post-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    .post-content pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .post-content pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+
+    .post-content blockquote {
+      border-left: 4px solid var(--brand);
+      padding: 12px 20px;
+      margin: 20px 0;
+      background: var(--bg-off);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .post-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .post-content a {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+
+    .post-content a:hover { color: var(--brand-light); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th { background: var(--bg-off); font-weight: 600; }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 40px 0;
+    }
+
+    .pagination a, .pagination span {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .pagination a:hover { border-color: var(--brand); color: var(--brand); }
+    .pagination .current { background: var(--brand); color: white; border-color: var(--brand); }
+
+    /* Archive page */
+    .archive-year {
+      font-size: 1.4rem;
+      margin: 32px 0 16px;
+      color: var(--text);
+    }
+
+    .archive-list { list-style: none; padding: 0; }
+    .archive-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .archive-list a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .archive-list a:hover { color: var(--brand); }
+    .archive-date {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-right: 12px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      margin-top: 60px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Key Takeaways */
+    .post-content blockquote:last-child {
+      border-left-color: #059669;
+      background: #ecfdf5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="site-title"><%= config.title %></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/archives">Archives</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; <%= new Date().getFullYear() %> <%= config.title %>. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
