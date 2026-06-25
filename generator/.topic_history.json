@@ -3,7 +3,8 @@
     "How to Build a REST API with Spring Boot 3 and Java 21",
     "Spring Boot 3 Virtual Threads: A Practical Performance Guide",
     "Record Patterns in Java 21: Write Cleaner Data-Centric Code",
-    "Building Reactive Microservices with Spring WebFlux"
+    "Building Reactive Microservices with Spring WebFlux",
+    "Spring Boot 3 Observability with Micrometer and OpenTelemetry"
   ],
   "post_dates": []
 }
