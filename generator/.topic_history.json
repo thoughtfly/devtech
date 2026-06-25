@@ -1,7 +1,8 @@
 {
   "used_topics": [
     "How to Build a REST API with Spring Boot 3 and Java 21",
-    "Spring Boot 3 Virtual Threads: A Practical Performance Guide"
+    "Spring Boot 3 Virtual Threads: A Practical Performance Guide",
+    "Record Patterns in Java 21: Write Cleaner Data-Centric Code"
   ],
   "post_dates": []
 }
