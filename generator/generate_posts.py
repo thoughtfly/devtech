@@ -27,7 +27,7 @@ import requests
 
 # API config - read from environment variables (GitHub Secrets)
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
+DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_MODEL = "deepseek-chat"
 
 # Blog config
@@ -48,6 +48,16 @@ TOPICS = [
     "Record Patterns in Java 21: Write Cleaner Data-Centric Code",
     "Building Reactive Microservices with Spring WebFlux",
     "Spring Boot 3 Observability with Micrometer and OpenTelemetry",
+    "Spring Security 6: JWT Authentication from Scratch",
+    "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers",
+    "Java 21 Pattern Matching for Switch: Real-World Examples",
+    "Building a CRUD Application with Spring Boot and JPA",
+    "Spring Boot Graceful Shutdown: Why and How",
+    "Java Functional Programming: Streams, Optional, and Collectors",
+    "Spring Boot Actuator: Production-Ready Monitoring",
+    "Handling Transactions in Spring: @Transactional Deep Dive",
+    "Java Multithreading Best Practices in 2026",
+    "Building REST Clients with Spring 6 RestClient",
 
     # === AI & LLM Integration ===
     "Building an AI-Powered Chatbot with Spring Boot and LangChain4j",
@@ -55,6 +65,14 @@ TOPICS = [
     "How to Build a Multi-Model AI Gateway with Spring Cloud Gateway",
     "Semantic Search with Vector Databases: A Developer's Guide",
     "Fine-Tuning vs RAG: Choosing the Right Approach for Your AI App",
+    "Building AI Agents with Spring AI Framework",
+    "Deploying LLMs in Production: A Backend Engineer's Guide",
+    "Integrating OpenAI API with Spring Boot: Complete Tutorial",
+    "Prompt Engineering for Developers: Patterns and Anti-Patterns",
+    "Building a Code Review Assistant with LLMs and Java",
+    "Vector Database Comparison: Pinecone vs Weaviate vs Qdrant",
+    "Cost Optimization Strategies for LLM API Usage",
+    "Building Intelligent Document Processing Pipelines with AI",
 
     # === System Design & Architecture ===
     "Microservices vs Modular Monolith: Making the Right Choice in 2026",
@@ -62,6 +80,13 @@ TOPICS = [
     "Designing Resilient Systems: Circuit Breaker and Retry Patterns",
     "API Gateway Patterns: Rate Limiting, Caching, and Authentication",
     "Database Sharding 101: When and How to Scale Horizontally",
+    "CQRS and Event Sourcing: A Practical Introduction",
+    "Designing RESTful APIs: Best Practices and Common Pitfalls",
+    "CAP Theorem Explained: Consistency, Availability, Partition Tolerance",
+    "Building Scalable Notification Systems: Architecture Deep Dive",
+    "Backend System Design Interview: Design a URL Shortener",
+    "Designing Idempotent APIs for Reliable Distributed Systems",
+    "Distributed Caching with Redis: Patterns and Anti-Patterns",
 
     # === DevOps & Cloud ===
     "GitHub Actions CI/CD Pipeline for Spring Boot Microservices",
@@ -69,6 +94,13 @@ TOPICS = [
     "Monitoring Java Applications with Prometheus and Grafana",
     "Terraform vs Pulumi: Infrastructure as Code for Java Teams",
     "Zero-Downtime Deployments for Spring Boot Applications",
+    "Kubernetes for Java Developers: A Practical Guide",
+    "Docker Compose for Local Spring Boot Development",
+    "Helm Charts for Spring Boot: Package and Deploy to Kubernetes",
+    "Git Workflows for Teams: GitFlow vs Trunk-Based Development",
+    "Cloud Cost Optimization for Java Microservices",
+    "Building a Multi-Environment CI/CD Pipeline with GitHub Actions",
+    "Service Mesh with Istio: When Do You Need It?",
 
     # === Performance & Optimization ===
     "JVM Performance Tuning: Garbage Collection Strategies in 2026",
@@ -76,6 +108,33 @@ TOPICS = [
     "Caching Strategies for High-Performance Java Applications",
     "Profiling Spring Boot Applications with Async Profiler",
     "Reducing Docker Image Size for Spring Boot: From 500MB to 100MB",
+    "Connection Pool Tuning: HikariCP Best Practices",
+    "Optimizing JPA Performance: N+1 Queries, Fetch Strategies, and Batching",
+    "Java Memory Leaks: Detection and Prevention",
+    "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads",
+    "Indexing Strategies for MySQL and PostgreSQL",
+    "Load Testing Spring Boot Applications with k6 and Gatling",
+
+    # === Databases & Data ===
+    "MySQL vs PostgreSQL for Java Applications in 2026",
+    "Spring Data JPA vs MyBatis: Which One Should You Choose?",
+    "Database Migration with Flyway: Version Control for Your Schema",
+    "Redis for Caching in Spring Boot: A Complete Guide",
+    "Working with MongoDB in Spring Boot: A Developer's Guide",
+    "Elasticsearch for Full-Text Search in Java Applications",
+    "Database Replication: Master-Slave vs Multi-Master",
+    "Introduction to Apache Kafka for Java Developers",
+
+    # === Career & Best Practices ===
+    "Clean Code in Java: Principles Every Developer Should Know",
+    "Effective Code Review: A Guide for Backend Engineers",
+    "Logging Best Practices for Spring Boot Applications",
+    "Exception Handling Patterns in Java: Checked vs Unchecked",
+    "API Versioning Strategies for RESTful Services",
+    "Secrets Management for Java Applications: Vault, AWS Secrets Manager",
+    "Building Developer Documentation with AsciiDoc and Spring REST Docs",
+    "Contract Testing with Spring Cloud Contract: A Practical Guide",
+    "Why Your Spring Boot Application Is Slow: A Debugging Checklist",
 ]
 
 # ============================================================
@@ -120,8 +179,8 @@ def get_next_topic(history):
     return topic, history
 
 
-def call_deepseek(topic, api_key):
-    """Generate a blog post using DeepSeek API."""
+def call_deepseek(topic, api_key, max_retries=3):
+    """Generate a blog post using DeepSeek API with retry logic."""
     system_prompt = """You are an expert technical writer for a software engineering blog. 
 Write high-quality, SEO-optimized blog posts in English.
 
@@ -147,48 +206,107 @@ Return ONLY valid JSON with this structure:
 
     user_prompt = f"Write a detailed technical blog post about: {topic}"
 
+    session = requests.Session()
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = session.post(
+                DEEPSEEK_API_URL,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": DEEPSEEK_MODEL,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    "temperature": 0.7,
+                    "max_tokens": 4000
+                },
+                timeout=300
+            )
+
+            if resp.status_code == 429:
+                wait = 2 ** attempt
+                print(f"[WARN] Rate limited (attempt {attempt}/{max_retries}), waiting {wait}s...")
+                import time
+                time.sleep(wait)
+                continue
+
+            resp.raise_for_status()
+            data = resp.json()
+            raw = data["choices"][0]["message"]["content"]
+
+            # Extract JSON from response (handle markdown code block wrapping)
+            result = extract_json(raw)
+            if result:
+                return result
+
+            print(f"[WARN] Failed to parse JSON on attempt {attempt}/{max_retries}")
+
+        except requests.exceptions.Timeout:
+            print(f"[WARN] Timeout on attempt {attempt}/{max_retries}")
+        except requests.exceptions.RequestException as e:
+            print(f"[WARN] API request failed on attempt {attempt}/{max_retries}: {e}")
+
+        if attempt < max_retries:
+            wait = 2 ** attempt
+            print(f"  Retrying in {wait}s...")
+            import time
+            time.sleep(wait)
+
+    print(f"[ERROR] All {max_retries} attempts failed for topic: {topic}")
+    return None
+
+
+def extract_json(text):
+    """Robustly extract JSON from API response text."""
+    text = text.strip()
+
+    # Try direct parse first
     try:
-        resp = requests.post(
-            DEEPSEEK_API_URL,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": DEEPSEEK_MODEL,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                "temperature": 0.7,
-                "max_tokens": 4000
-            },
-            timeout=120
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        content = data["choices"][0]["message"]["content"]
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
 
-        # Try to parse JSON from response
-        content = content.strip()
-        if content.startswith("```json"):
-            content = content[7:]
-        if content.startswith("```"):
-            content = content[3:]
-        if content.endswith("```"):
-            content = content[:-3]
-        content = content.strip()
+    # Handle markdown code block wrapping
+    # Remove ```json ... ``` or ``` ... ```
+    lines = text.split('\n')
+    if lines[0].strip().startswith('```'):
+        lines = lines[1:]
+    if lines and lines[-1].strip().startswith('```'):
+        lines = lines[:-1]
+    cleaned = '\n'.join(lines).strip()
 
-        result = json.loads(content)
-        return result
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
 
-    except json.JSONDecodeError as e:
-        print(f"[ERROR] Failed to parse JSON response: {e}")
-        print(f"[DEBUG] Raw response: {content[:500]}...")
-        return None
-    except requests.exceptions.RequestException as e:
-        print(f"[ERROR] API request failed: {e}")
-        return None
+    # Try to find JSON object boundaries
+    start = text.find('{')
+    end = text.rfind('}')
+    if start != -1 and end != -1 and end > start:
+        candidate = text[start:end+1]
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+
+    # Last resort: try to repair common issues (unescaped newlines in strings)
+    import re
+    try:
+        # Escape unescaped newlines within string values
+        repaired = re.sub(r'(?<=[^\\])"(?:[^"\\]|\\.)*"', 
+                         lambda m: m.group(0).replace('\n', '\\n').replace('\r', '\\r'), 
+                         cleaned)
+        return json.loads(repaired)
+    except (json.JSONDecodeError, re.error):
+        pass
+
+    return None
 
 
 def save_post(post_data, topic, dry_run=False):

@@ -93,6 +93,13 @@ sitemap:
   tags: false
   categories: false
 
+# Feed / RSS
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+
 # Markdown
 marked:
   prependRoot: true

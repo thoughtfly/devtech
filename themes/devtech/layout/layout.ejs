@@ -17,8 +17,19 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="<%= config.url %>/<%= page.path %>">
 
-  <!-- RSS (future use) -->
-  <link rel="alternate" type="application/rss+xml" title="<%= config.title %>" href="/atom.xml">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">
+
+  <!-- Google Analytics -->
+  <% if (theme.google_analytics) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%= theme.google_analytics %>');
+    </script>
+  <% } %>
 
   <style>
     :root {
@@ -259,10 +270,10 @@
 <body>
   <header>
     <div class="container">
-      <a href="/" class="site-title"><%= config.title %></a>
+      <a href="<%= url_for('/') %>" class="site-title"><%= config.title %></a>
       <nav>
-        <a href="/">Home</a>
-        <a href="/archives">Archives</a>
+        <a href="<%= url_for('/') %>">Home</a>
+        <a href="<%= url_for('/archives') %>">Archives</a>
       </nav>
     </div>
   </header>
