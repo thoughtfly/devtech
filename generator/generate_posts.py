@@ -195,13 +195,15 @@ Requirements:
 - DO NOT include disclaimer or "AI-generated" notes
 - DO NOT include a conclusion section - end with Key Takeaways
 - Frontmatter must include: title, date, tags, categories
+- Include a concise SEO meta description (120-160 characters) in the desc field
 
 Return ONLY valid JSON with this structure:
 {
   "title": "Post title",
+  "desc": "SEO meta description (120-160 chars, no quotes with issues)",
   "tags": ["tag1", "tag2", "tag3"],
   "categories": ["Java"],
-  "content": "Full markdown content including frontmatter"
+  "content": "Full markdown content"
 }"""
 
     user_prompt = f"Write a detailed technical blog post about: {topic}"
@@ -321,13 +323,19 @@ def save_post(post_data, topic, dry_run=False):
     tags_str = ", ".join(post_data.get("tags", ["tech"]))
     cats_str = ", ".join(post_data.get("categories", ["Uncategorized"]))
 
+    # Use AI-generated SEO description, fallback to title
+    seo_desc = post_data.get("desc", "").strip() or post_data["title"]
+    # Truncate at 160 chars for clean SERP snippets
+    if len(seo_desc) > 160:
+        seo_desc = seo_desc[:157].rstrip() + "..."
+
     frontmatter = f"""---
 title: "{post_data['title']}"
 date: {date_str}
 tags: [{tags_str}]
 categories: [{cats_str}]
 cover:
-description: {post_data['title']}
+description: {seo_desc}
 ---
 """
 

@@ -12,10 +12,10 @@
   <meta property="og:title" content="<%= page.title || config.title %>">
   <meta property="og:description" content="<%= page.description || config.description %>">
   <meta property="og:type" content="<%= page.type || 'website' %>">
-  <meta property="og:url" content="<%= config.url %><%= page.path %>">
+  <meta property="og:url" content="<%= config.url %><%= url_for(page.path) %>">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="<%= config.url %>/<%= page.path %>">
+  <link rel="canonical" href="<%= config.url %><%= url_for(page.path) %>">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">

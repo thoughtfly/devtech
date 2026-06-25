@@ -1,3 +1,28 @@
+<!-- Schema.org Article Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "<%= page.title.replace(/"/g, '\\"') %>",
+  "description": "<%= (page.description || page.content.substring(0, 200)).replace(/"/g, '\\"').replace(/\n/g, ' ') %>",
+  "author": {
+    "@type": "Person",
+    "name": "<%= config.author %>"
+  },
+  "datePublished": "<%= date(page.date, 'YYYY-MM-DD') %>",
+  "dateModified": "<%= date(page.updated || page.date, 'YYYY-MM-DD') %>",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "<%= config.url %><%= url_for(page.path) %>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "<%= config.title %>"
+  },
+  "keywords": "<%= page.tags ? page.tags.map(function(t){ return t.name }).join(', ') : '' %>"
+}
+</script>
+
 <article class="post-content">
   <h1><%= page.title %></h1>
   <div class="post-meta" style="margin-bottom: 24px;">

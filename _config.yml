@@ -11,7 +11,7 @@ language: en
 timezone: Asia/Shanghai
 
 # URL
-url: https://thoughtfly.github.io/devtech
+url: https://thoughtfly.github.io
 root: /devtech/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
