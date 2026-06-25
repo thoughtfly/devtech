@@ -1,1 +1,1 @@
-# DevTech Insights - AI-Powered English Tech Blog
+# DevTech Insights - English Tech Blog
