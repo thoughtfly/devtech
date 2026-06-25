@@ -4,7 +4,8 @@
     "Spring Boot 3 Virtual Threads: A Practical Performance Guide",
     "Record Patterns in Java 21: Write Cleaner Data-Centric Code",
     "Building Reactive Microservices with Spring WebFlux",
-    "Spring Boot 3 Observability with Micrometer and OpenTelemetry"
+    "Spring Boot 3 Observability with Micrometer and OpenTelemetry",
+    "Spring Security 6: JWT Authentication from Scratch"
   ],
   "post_dates": []
 }
