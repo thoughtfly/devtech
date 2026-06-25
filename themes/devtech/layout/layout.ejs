@@ -274,6 +274,8 @@
       <nav>
         <a href="<%= url_for('/') %>">Home</a>
         <a href="<%= url_for('/archives') %>">Archives</a>
+        <a href="<%= url_for('/about') %>">About</a>
+        <a href="<%= url_for('/privacy') %>">Privacy</a>
       </nav>
     </div>
   </header>
@@ -285,6 +287,9 @@
   <footer>
     <div class="container">
       &copy; <%= new Date().getFullYear() %> <%= config.title %>. All rights reserved.
+      <span style="margin-left: 16px;">
+        <a href="<%= url_for('/privacy') %>" style="color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">Privacy Policy</a>
+      </span>
     </div>
   </footer>
 </body>
