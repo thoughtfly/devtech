@@ -99,6 +99,9 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+  content: true
+  autodiscovery: true
+  order_by: -date
 
 # Markdown
 marked:
