@@ -5,7 +5,8 @@
     "Record Patterns in Java 21: Write Cleaner Data-Centric Code",
     "Building Reactive Microservices with Spring WebFlux",
     "Spring Boot 3 Observability with Micrometer and OpenTelemetry",
-    "Spring Security 6: JWT Authentication from Scratch"
+    "Spring Security 6: JWT Authentication from Scratch",
+    "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers"
   ],
   "post_dates": []
 }
