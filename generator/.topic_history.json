@@ -6,7 +6,8 @@
     "Building Reactive Microservices with Spring WebFlux",
     "Spring Boot 3 Observability with Micrometer and OpenTelemetry",
     "Spring Security 6: JWT Authentication from Scratch",
-    "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers"
+    "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers",
+    "Java 21 Pattern Matching for Switch: Real-World Examples"
   ],
   "post_dates": []
 }
