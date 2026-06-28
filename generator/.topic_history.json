@@ -7,7 +7,8 @@
     "Spring Boot 3 Observability with Micrometer and OpenTelemetry",
     "Spring Security 6: JWT Authentication from Scratch",
     "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers",
-    "Java 21 Pattern Matching for Switch: Real-World Examples"
+    "Java 21 Pattern Matching for Switch: Real-World Examples",
+    "Building a CRUD Application with Spring Boot and JPA"
   ],
   "post_dates": []
 }
