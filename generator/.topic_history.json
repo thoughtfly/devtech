@@ -8,7 +8,8 @@
     "Spring Security 6: JWT Authentication from Scratch",
     "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers",
     "Java 21 Pattern Matching for Switch: Real-World Examples",
-    "Building a CRUD Application with Spring Boot and JPA"
+    "Building a CRUD Application with Spring Boot and JPA",
+    "Spring Boot Graceful Shutdown: Why and How"
   ],
   "post_dates": []
 }
