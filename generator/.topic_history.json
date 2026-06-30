@@ -9,7 +9,8 @@
     "Spring Boot Testing: Unit Tests, Integration Tests, and Testcontainers",
     "Java 21 Pattern Matching for Switch: Real-World Examples",
     "Building a CRUD Application with Spring Boot and JPA",
-    "Spring Boot Graceful Shutdown: Why and How"
+    "Spring Boot Graceful Shutdown: Why and How",
+    "Java Functional Programming: Streams, Optional, and Collectors"
   ],
   "post_dates": []
 }
