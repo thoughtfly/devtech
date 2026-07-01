@@ -10,7 +10,8 @@
     "Java 21 Pattern Matching for Switch: Real-World Examples",
     "Building a CRUD Application with Spring Boot and JPA",
     "Spring Boot Graceful Shutdown: Why and How",
-    "Java Functional Programming: Streams, Optional, and Collectors"
+    "Java Functional Programming: Streams, Optional, and Collectors",
+    "Spring Boot Actuator: Production-Ready Monitoring"
   ],
   "post_dates": []
 }
