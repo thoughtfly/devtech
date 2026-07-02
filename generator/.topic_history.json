@@ -11,7 +11,8 @@
     "Building a CRUD Application with Spring Boot and JPA",
     "Spring Boot Graceful Shutdown: Why and How",
     "Java Functional Programming: Streams, Optional, and Collectors",
-    "Spring Boot Actuator: Production-Ready Monitoring"
+    "Spring Boot Actuator: Production-Ready Monitoring",
+    "Handling Transactions in Spring: @Transactional Deep Dive"
   ],
   "post_dates": []
 }
