@@ -15,7 +15,8 @@
     "Handling Transactions in Spring: @Transactional Deep Dive",
     "Java Multithreading Best Practices in 2026",
     "Building REST Clients with Spring 6 RestClient",
-    "Building an AI-Powered Chatbot with Spring Boot and LangChain4j"
+    "Building an AI-Powered Chatbot with Spring Boot and LangChain4j",
+    "Practical Guide to RAG: Enhancing LLM Responses with Your Own Data"
   ],
   "post_dates": []
 }
