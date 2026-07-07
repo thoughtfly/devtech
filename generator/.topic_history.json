@@ -16,7 +16,8 @@
     "Java Multithreading Best Practices in 2026",
     "Building REST Clients with Spring 6 RestClient",
     "Building an AI-Powered Chatbot with Spring Boot and LangChain4j",
-    "Practical Guide to RAG: Enhancing LLM Responses with Your Own Data"
+    "Practical Guide to RAG: Enhancing LLM Responses with Your Own Data",
+    "How to Build a Multi-Model AI Gateway with Spring Cloud Gateway"
   ],
   "post_dates": []
 }
