@@ -17,7 +17,8 @@
     "Building REST Clients with Spring 6 RestClient",
     "Building an AI-Powered Chatbot with Spring Boot and LangChain4j",
     "Practical Guide to RAG: Enhancing LLM Responses with Your Own Data",
-    "How to Build a Multi-Model AI Gateway with Spring Cloud Gateway"
+    "How to Build a Multi-Model AI Gateway with Spring Cloud Gateway",
+    "Semantic Search with Vector Databases: A Developer's Guide"
   ],
   "post_dates": []
 }
