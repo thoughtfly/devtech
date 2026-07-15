@@ -24,7 +24,8 @@
     "Deploying LLMs in Production: A Backend Engineer's Guide",
     "Integrating OpenAI API with Spring Boot: Complete Tutorial",
     "Prompt Engineering for Developers: Patterns and Anti-Patterns",
-    "Building a Code Review Assistant with LLMs and Java"
+    "Building a Code Review Assistant with LLMs and Java",
+    "Vector Database Comparison: Pinecone vs Weaviate vs Qdrant"
   ],
   "post_dates": []
 }
