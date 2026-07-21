@@ -30,7 +30,8 @@
     "Building Intelligent Document Processing Pipelines with AI",
     "Microservices vs Modular Monolith: Making the Right Choice in 2026",
     "Event-Driven Architecture with Kafka and Spring Boot",
-    "Designing Resilient Systems: Circuit Breaker and Retry Patterns"
+    "Designing Resilient Systems: Circuit Breaker and Retry Patterns",
+    "API Gateway Patterns: Rate Limiting, Caching, and Authentication"
   ],
   "post_dates": []
 }
