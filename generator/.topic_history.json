@@ -31,7 +31,8 @@
     "Microservices vs Modular Monolith: Making the Right Choice in 2026",
     "Event-Driven Architecture with Kafka and Spring Boot",
     "Designing Resilient Systems: Circuit Breaker and Retry Patterns",
-    "API Gateway Patterns: Rate Limiting, Caching, and Authentication"
+    "API Gateway Patterns: Rate Limiting, Caching, and Authentication",
+    "Database Sharding 101: When and How to Scale Horizontally"
   ],
   "post_dates": []
 }
