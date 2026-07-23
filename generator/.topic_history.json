@@ -32,7 +32,8 @@
     "Event-Driven Architecture with Kafka and Spring Boot",
     "Designing Resilient Systems: Circuit Breaker and Retry Patterns",
     "API Gateway Patterns: Rate Limiting, Caching, and Authentication",
-    "Database Sharding 101: When and How to Scale Horizontally"
+    "Database Sharding 101: When and How to Scale Horizontally",
+    "CQRS and Event Sourcing: A Practical Introduction"
   ],
   "post_dates": []
 }
