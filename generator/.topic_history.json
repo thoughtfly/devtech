@@ -34,7 +34,8 @@
     "API Gateway Patterns: Rate Limiting, Caching, and Authentication",
     "Database Sharding 101: When and How to Scale Horizontally",
     "CQRS and Event Sourcing: A Practical Introduction",
-    "Designing RESTful APIs: Best Practices and Common Pitfalls"
+    "Designing RESTful APIs: Best Practices and Common Pitfalls",
+    "CAP Theorem Explained: Consistency, Availability, Partition Tolerance"
   ],
   "post_dates": []
 }
