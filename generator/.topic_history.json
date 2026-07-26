@@ -35,7 +35,8 @@
     "Database Sharding 101: When and How to Scale Horizontally",
     "CQRS and Event Sourcing: A Practical Introduction",
     "Designing RESTful APIs: Best Practices and Common Pitfalls",
-    "CAP Theorem Explained: Consistency, Availability, Partition Tolerance"
+    "CAP Theorem Explained: Consistency, Availability, Partition Tolerance",
+    "Building Scalable Notification Systems: Architecture Deep Dive"
   ],
   "post_dates": []
 }
