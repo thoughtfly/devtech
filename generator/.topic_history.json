@@ -37,7 +37,8 @@
     "Designing RESTful APIs: Best Practices and Common Pitfalls",
     "CAP Theorem Explained: Consistency, Availability, Partition Tolerance",
     "Building Scalable Notification Systems: Architecture Deep Dive",
-    "Backend System Design Interview: Design a URL Shortener"
+    "Backend System Design Interview: Design a URL Shortener",
+    "Designing Idempotent APIs for Reliable Distributed Systems"
   ],
   "post_dates": []
 }
