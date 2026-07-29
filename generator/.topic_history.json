@@ -38,7 +38,8 @@
     "CAP Theorem Explained: Consistency, Availability, Partition Tolerance",
     "Building Scalable Notification Systems: Architecture Deep Dive",
     "Backend System Design Interview: Design a URL Shortener",
-    "Designing Idempotent APIs for Reliable Distributed Systems"
+    "Designing Idempotent APIs for Reliable Distributed Systems",
+    "Distributed Caching with Redis: Patterns and Anti-Patterns"
   ],
   "post_dates": []
 }
