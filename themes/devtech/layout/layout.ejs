@@ -250,6 +250,48 @@
       margin-right: 12px;
     }
 
+    /* Related Posts */
+    .related-posts {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .related-posts h2 {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .related-posts ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .related-posts li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .related-posts li:last-child { border-bottom: none; }
+
+    .related-posts .rp-title {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .related-posts .rp-title:hover { color: var(--brand); }
+
+    .related-posts .rp-date {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border);

@@ -47,3 +47,43 @@
 
   <%- page.content %>
 </article>
+
+<%
+// ===== Related Posts: same-category posts ranked by shared tags =====
+var _curTags = page.tags ? page.tags.map(function(t){ return t.name; }) : [];
+var _curCats = page.categories ? page.categories.map(function(c){ return c.name; }) : [];
+var _sameCat = [];
+var _other = [];
+site.posts.each(function(p){
+  if (!p.path || p.path === page.path) return;
+  var _pTags = p.tags ? p.tags.map(function(t){ return t.name; }) : [];
+  var _pCats = p.categories ? p.categories.map(function(c){ return c.name; }) : [];
+  var _shared = _pTags.filter(function(t){ return _curTags.indexOf(t) !== -1; }).length;
+  var _isSame = _curCats.some(function(c){ return _pCats.indexOf(c) !== -1; });
+  var _item = { post: p, score: _shared, date: p.date };
+  if (_isSame) _sameCat.push(_item); else _other.push(_item);
+});
+function _byScore(a, b){
+  if (b.score !== a.score) return b.score - a.score;
+  var da = a.date ? a.date.valueOf() : 0;
+  var db = b.date ? b.date.valueOf() : 0;
+  return db - da;
+}
+_sameCat.sort(_byScore);
+_other.sort(_byScore);
+var relatedPosts = _sameCat.concat(_other).slice(0, 5);
+%>
+
+<% if (relatedPosts.length) { %>
+<section class="related-posts">
+  <h2>Related Posts</h2>
+  <ul>
+    <% relatedPosts.forEach(function(item){ %>
+      <li>
+        <a href="<%= url_for(item.post.path) %>" class="rp-title"><%= item.post.title %></a>
+        <span class="rp-date"><%= date(item.post.date, 'MMM D, YYYY') %></span>
+      </li>
+    <% }) %>
+  </ul>
+</section>
+<% } %>
