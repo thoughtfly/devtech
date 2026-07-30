@@ -44,6 +44,7 @@ jobs:
       - name: Generate blog posts
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           COUNT="${{ inputs.count || '1' }}"
           python generator/generate_posts.py --count "$COUNT"

@@ -30,6 +30,12 @@ DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_MODEL = "deepseek-chat"
 
+# Cover image (v1): Unsplash official API. Falls back to Picsum if no key / API fails.
+UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+UNSPLASH_API_URL = "https://api.unsplash.com/photos/random"
+# Topic-agnostic, no-key fallback cover (deterministic per slug)
+PICSUM_FALLBACK = lambda slug: f"https://picsum.photos/seed/{slug}/1200/630"
+
 # Blog config
 BLOG_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = BLOG_ROOT / "source" / "_posts"
@@ -430,6 +436,67 @@ def extract_json(text):
     return None
 
 
+def _build_unsplash_query(topic):
+    """Strip filler words so Unsplash gets a cleaner search query."""
+    stop = r"\b(a|an|the|for|with|in|on|of|to|and|vs|how|build|building|guide|"
+    stop += r"practical|complete|introduction|deep dive|101|from scratch|"
+    stop += r"a complete|real-world|developer's|developers)\b"
+    q = re.sub(stop, " ", topic, flags=re.IGNORECASE)
+    q = re.sub(r"\s+", " ", q).strip()
+    return q or topic
+
+
+def fetch_cover_image(topic, slug, max_retries=3):
+    """Fetch a topic-relevant cover image URL via Unsplash official API.
+
+    - Requires UNSPLASH_ACCESS_KEY (set locally or as GitHub Secret).
+    - On missing key, 401, 429 exhaustion, or any network error, falls back
+      to Picsum (no key needed) so post generation never blocks.
+    Returns a direct image URL string.
+    """
+    fallback = PICSUM_FALLBACK(slug)
+
+    if not UNSPLASH_ACCESS_KEY:
+        print("[INFO] UNSPLASH_ACCESS_KEY not set -> using Picsum fallback cover.")
+        return fallback
+
+    query = _build_unsplash_query(topic)
+    session = requests.Session()
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = session.get(
+                UNSPLASH_API_URL,
+                params={"query": query, "orientation": "landscape", "content_filter": "high"},
+                headers={"Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"},
+                timeout=30,
+            )
+            if resp.status_code == 401:
+                print("[WARN] Unsplash auth failed (401) -> Picsum fallback.")
+                return fallback
+            if resp.status_code == 429:
+                wait = 2 ** attempt
+                print(f"[WARN] Unsplash rate limited (attempt {attempt}/{max_retries}), wait {wait}s")
+                import time
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            url = (data.get("urls") or {}).get("regular")
+            if url:
+                print(f"[OK] Cover via Unsplash: {url[:78]}...")
+                return url
+            return fallback
+        except requests.exceptions.RequestException as e:
+            print(f"[WARN] Unsplash request failed (attempt {attempt}/{max_retries}): {e}")
+            if attempt < max_retries:
+                import time
+                time.sleep(2 ** attempt)
+
+    print("[WARN] Unsplash unavailable after retries -> Picsum fallback.")
+    return fallback
+
+
 def save_post(post_data, topic, dry_run=False):
     """Save the generated post as a markdown file."""
     today = datetime.now(timezone.utc)
@@ -448,12 +515,15 @@ def save_post(post_data, topic, dry_run=False):
     if len(seo_desc) > 160:
         seo_desc = seo_desc[:157].rstrip() + "..."
 
+    # Fetch a topic-relevant cover image (Unsplash w/ Picsum fallback)
+    cover_url = fetch_cover_image(topic, slug)
+
     frontmatter = f"""---
 title: "{post_data['title']}"
 date: {date_str}
 tags: [{tags_str}]
 categories: [{cats_str}]
-cover:
+cover: "{cover_url}"
 description: {seo_desc}
 ---
 """
