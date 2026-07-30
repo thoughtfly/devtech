@@ -20,6 +20,13 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">
 
+  <!-- Preconnect to third-party origins (analytics + cover image CDNs) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://picsum.photos">
+  <link rel="preconnect" href="https://fastly.picsum.photos">
+
   <!-- Google Analytics -->
   <% if (theme.google_analytics) { %>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics %>"></script>
