@@ -40,7 +40,8 @@
     "Backend System Design Interview: Design a URL Shortener",
     "Designing Idempotent APIs for Reliable Distributed Systems",
     "Distributed Caching with Redis: Patterns and Anti-Patterns",
-    "Spring Boot 3.2+ Features Every Developer Should Know"
+    "Spring Boot 3.2+ Features Every Developer Should Know",
+    "Migrating from Spring Boot 2.x to 3.x: A Complete Checklist"
   ],
   "post_dates": []
 }
