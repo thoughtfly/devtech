@@ -56,4 +56,4 @@ We may update this policy from time to time. Changes will be posted on this page
 
 ### Contact
 
-If you have questions about this policy, please open an issue on [GitHub](https://github.com/thoughtfly/devtech).
+If you have questions about this policy, please reach out by email at [windflycn@gmail.com](mailto:windflycn@gmail.com) or open an issue on [GitHub](https://github.com/thoughtfly/devtech).
