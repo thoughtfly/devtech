@@ -23,14 +23,20 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Single job: generate -> build -> deploy in the same workspace.
+# This guarantees freshly generated posts are included in the build
+# (a separate build job would checkout the pre-generate commit and miss them).
 jobs:
-  generate:
+  generate-and-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      has_new_posts: ${{ steps.check_changes.outputs.has_new_posts }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -49,32 +55,16 @@ jobs:
           COUNT="${{ inputs.count || '1' }}"
           python generator/generate_posts.py --count "$COUNT"
 
-      - name: Check for changes
-        id: check_changes
+      - name: Commit new posts
         run: |
           if [[ -n $(git status --porcelain) ]]; then
-            echo "has_new_posts=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_new_posts=false" >> $GITHUB_OUTPUT
+            git config user.name "devtech-bot"
+            git config user.email "bot@devtech-blog.com"
+            git add source/_posts/ generator/.topic_history.json
+            TIMESTAMP=$(date +"%Y-%m-%d %H:%M UTC")
+            git commit -m "auto: generate blog posts - ${TIMESTAMP}"
+            git push
           fi
-
-      - name: Commit new posts
-        if: steps.check_changes.outputs.has_new_posts == 'true'
-        run: |
-          git config user.name "devtech-bot"
-          git config user.email "bot@devtech-blog.com"
-          git add source/_posts/ generator/.topic_history.json
-          TIMESTAMP=$(date +"%Y-%m-%d %H:%M UTC")
-          git commit -m "auto: generate blog posts - ${TIMESTAMP}"
-          git push
-
-  build-and-deploy:
-    needs: generate
-    runs-on: ubuntu-latest
-    # Always build (even if no new posts, to rebuild from cache/theme updates)
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -97,13 +87,6 @@ jobs:
         with:
           path: ./public
 
-  deploy:
-    needs: build-and-deploy
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
