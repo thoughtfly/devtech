@@ -121,3 +121,11 @@ marked:
     permalink: false
     permalinkClass: header-anchor
     permalinkSymbol: '#'
+
+# Image lazy loading (hexo-lazyload-image)
+# - All below-the-fold images get lazy-loaded via IntersectionObserver.
+# - The post cover carries class="no-lazy" so it stays eager (it is the LCP element).
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg:

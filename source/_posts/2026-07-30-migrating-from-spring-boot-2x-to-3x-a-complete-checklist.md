@@ -3,7 +3,7 @@ title: "Migrating from Spring Boot 2.x to 3.x: A Complete Checklist"
 date: 2026-07-30
 tags: [Spring Boot, Java, Migration, Jakarta EE, Spring Security]
 categories: [Java]
-cover: "https://images.unsplash.com/photo-1762340915700-356b34475448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDEwOTUyfDB8MXxyYW5kb218fHx8fHx8fHwxNzg1NDA2ODU0fA&ixlib=rb-4.1.0&q=80&w=1080"
+cover: "https://images.unsplash.com/photo-1762340915700-356b34475448?w=1200&q=80&fit=crop&fm=webp"
 description: A practical guide for migrating Spring Boot 2.x apps to 3.x, covering Java 17, Jakarta EE, Spring Security 6, and configuration changes with a step-by-step c...
 ---
 

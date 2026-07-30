@@ -34,7 +34,7 @@ DEEPSEEK_MODEL = "deepseek-chat"
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 UNSPLASH_API_URL = "https://api.unsplash.com/photos/random"
 # Topic-agnostic, no-key fallback cover (deterministic per slug)
-PICSUM_FALLBACK = lambda slug: f"https://picsum.photos/seed/{slug}/1200/630"
+PICSUM_FALLBACK = lambda slug: f"https://picsum.photos/seed/{slug}/1200/630.webp"
 
 # Blog config
 BLOG_ROOT = Path(__file__).resolve().parent.parent
@@ -446,6 +446,16 @@ def _build_unsplash_query(topic):
     return q or topic
 
 
+def _to_webp(url):
+    """Force WebP for cover images served by Imgix (Unsplash) / Picsum CDNs."""
+    if "images.unsplash.com" in url:
+        base = url.split("?")[0]
+        return f"{base}?w=1200&q=80&fit=crop&fm=webp"
+    if "picsum.photos" in url and not url.endswith(".webp"):
+        return url + ".webp"
+    return url
+
+
 def fetch_cover_image(topic, slug, max_retries=3):
     """Fetch a topic-relevant cover image URL via Unsplash official API.
 
@@ -484,8 +494,9 @@ def fetch_cover_image(topic, slug, max_retries=3):
             data = resp.json()
             url = (data.get("urls") or {}).get("regular")
             if url:
-                print(f"[OK] Cover via Unsplash: {url[:78]}...")
-                return url
+                webp_url = _to_webp(url)
+                print(f"[OK] Cover via Unsplash: {webp_url[:78]}...")
+                return webp_url
             return fallback
         except requests.exceptions.RequestException as e:
             print(f"[WARN] Unsplash request failed (attempt {attempt}/{max_retries}): {e}")

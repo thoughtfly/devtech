@@ -3,7 +3,7 @@ title: "Spring Boot 3.2+ Features Every Developer Should Know"
 date: 2026-07-30
 tags: [Spring Boot, Java 21, Virtual Threads, CDS, SSL]
 categories: [Java]
-cover: "https://picsum.photos/seed/spring-boot-32-features-every-developer-should-know/1200/630"
+cover: "https://picsum.photos/seed/spring-boot-32-features-every-developer-should-know/1200/630.webp"
 description: Explore the latest features in Spring Boot 3.2+ including virtual threads, CDS support, SSL hot reload, and more. Boost performance and developer experience.
 ---
 
