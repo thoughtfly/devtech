@@ -41,7 +41,8 @@
     "Designing Idempotent APIs for Reliable Distributed Systems",
     "Distributed Caching with Redis: Patterns and Anti-Patterns",
     "Spring Boot 3.2+ Features Every Developer Should Know",
-    "Migrating from Spring Boot 2.x to 3.x: A Complete Checklist"
+    "Migrating from Spring Boot 2.x to 3.x: A Complete Checklist",
+    "Building GraphQL APIs with Spring for GraphQL"
   ],
   "post_dates": []
 }
