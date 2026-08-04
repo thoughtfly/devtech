@@ -45,7 +45,8 @@
     "Building GraphQL APIs with Spring for GraphQL",
     "Spring Modulith: Building Modular Monoliths the Right Way",
     "Java 21 Sequenced Collections: Practical Use Cases",
-    "Structured Concurrency in Java 21: Virtual Threads in Action"
+    "Structured Concurrency in Java 21: Virtual Threads in Action",
+    "Building Custom Spring Boot Starters: When and How"
   ],
   "post_dates": []
 }
