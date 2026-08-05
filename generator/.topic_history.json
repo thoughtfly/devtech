@@ -46,7 +46,8 @@
     "Spring Modulith: Building Modular Monoliths the Right Way",
     "Java 21 Sequenced Collections: Practical Use Cases",
     "Structured Concurrency in Java 21: Virtual Threads in Action",
-    "Building Custom Spring Boot Starters: When and How"
+    "Building Custom Spring Boot Starters: When and How",
+    "Handling File Uploads in Spring Boot with MultipartFile"
   ],
   "post_dates": []
 }
