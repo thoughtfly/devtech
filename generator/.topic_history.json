@@ -47,7 +47,8 @@
     "Java 21 Sequenced Collections: Practical Use Cases",
     "Structured Concurrency in Java 21: Virtual Threads in Action",
     "Building Custom Spring Boot Starters: When and How",
-    "Handling File Uploads in Spring Boot with MultipartFile"
+    "Handling File Uploads in Spring Boot with MultipartFile",
+    "Spring Scheduled Tasks: @Scheduled and @Async Patterns"
   ],
   "post_dates": []
 }
