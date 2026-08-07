@@ -48,7 +48,8 @@
     "Structured Concurrency in Java 21: Virtual Threads in Action",
     "Building Custom Spring Boot Starters: When and How",
     "Handling File Uploads in Spring Boot with MultipartFile",
-    "Spring Scheduled Tasks: @Scheduled and @Async Patterns"
+    "Spring Scheduled Tasks: @Scheduled and @Async Patterns",
+    "Building WebSocket Applications with Spring Boot"
   ],
   "post_dates": []
 }
