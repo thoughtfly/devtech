@@ -50,7 +50,8 @@
     "Handling File Uploads in Spring Boot with MultipartFile",
     "Spring Scheduled Tasks: @Scheduled and @Async Patterns",
     "Building WebSocket Applications with Spring Boot",
-    "Java Records as DTOs: Best Practices"
+    "Java Records as DTOs: Best Practices",
+    "Spring Boot Profiles: Environment-Specific Configuration"
   ],
   "post_dates": []
 }
