@@ -51,7 +51,8 @@
     "Spring Scheduled Tasks: @Scheduled and @Async Patterns",
     "Building WebSocket Applications with Spring Boot",
     "Java Records as DTOs: Best Practices",
-    "Spring Boot Profiles: Environment-Specific Configuration"
+    "Spring Boot Profiles: Environment-Specific Configuration",
+    "Bulkhead Pattern in Java: Resilience4j in Action"
   ],
   "post_dates": []
 }
