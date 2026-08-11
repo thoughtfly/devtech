@@ -52,7 +52,8 @@
     "Building WebSocket Applications with Spring Boot",
     "Java Records as DTOs: Best Practices",
     "Spring Boot Profiles: Environment-Specific Configuration",
-    "Bulkhead Pattern in Java: Resilience4j in Action"
+    "Bulkhead Pattern in Java: Resilience4j in Action",
+    "Spring Boot + Elasticsearch: Full-Text Search Integration"
   ],
   "post_dates": []
 }
