@@ -53,7 +53,8 @@
     "Java Records as DTOs: Best Practices",
     "Spring Boot Profiles: Environment-Specific Configuration",
     "Bulkhead Pattern in Java: Resilience4j in Action",
-    "Spring Boot + Elasticsearch: Full-Text Search Integration"
+    "Spring Boot + Elasticsearch: Full-Text Search Integration",
+    "Spring for Apache Kafka: Producer and Consumer Patterns"
   ],
   "post_dates": []
 }
