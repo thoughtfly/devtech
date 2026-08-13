@@ -54,7 +54,8 @@
     "Spring Boot Profiles: Environment-Specific Configuration",
     "Bulkhead Pattern in Java: Resilience4j in Action",
     "Spring Boot + Elasticsearch: Full-Text Search Integration",
-    "Spring for Apache Kafka: Producer and Consumer Patterns"
+    "Spring for Apache Kafka: Producer and Consumer Patterns",
+    "Building a RAG Pipeline with pgvector and Spring Boot"
   ],
   "post_dates": []
 }
