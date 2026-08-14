@@ -55,7 +55,8 @@
     "Bulkhead Pattern in Java: Resilience4j in Action",
     "Spring Boot + Elasticsearch: Full-Text Search Integration",
     "Spring for Apache Kafka: Producer and Consumer Patterns",
-    "Building a RAG Pipeline with pgvector and Spring Boot"
+    "Building a RAG Pipeline with pgvector and Spring Boot",
+    "LLM Function Calling: A Practical Guide for Backend Devs"
   ],
   "post_dates": []
 }
