@@ -56,7 +56,8 @@
     "Spring Boot + Elasticsearch: Full-Text Search Integration",
     "Spring for Apache Kafka: Producer and Consumer Patterns",
     "Building a RAG Pipeline with pgvector and Spring Boot",
-    "LLM Function Calling: A Practical Guide for Backend Devs"
+    "LLM Function Calling: A Practical Guide for Backend Devs",
+    "Streaming LLM Responses with Server-Sent Events in Java"
   ],
   "post_dates": []
 }
