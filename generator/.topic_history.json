@@ -58,7 +58,8 @@
     "Building a RAG Pipeline with pgvector and Spring Boot",
     "LLM Function Calling: A Practical Guide for Backend Devs",
     "Streaming LLM Responses with Server-Sent Events in Java",
-    "Building a Local RAG System with Ollama and LangChain4j"
+    "Building a Local RAG System with Ollama and LangChain4j",
+    "Evaluating RAG Systems: Metrics and Methods"
   ],
   "post_dates": []
 }
