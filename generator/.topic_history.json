@@ -61,7 +61,8 @@
     "Building a Local RAG System with Ollama and LangChain4j",
     "Evaluating RAG Systems: Metrics and Methods",
     "AI Gateway Rate Limiting and Cost Control",
-    "Building an LLM-Powered Slack Bot with Java"
+    "Building an LLM-Powered Slack Bot with Java",
+    "Multimodal LLMs: Processing Images and Documents in Java"
   ],
   "post_dates": []
 }
