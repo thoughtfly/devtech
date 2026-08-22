@@ -63,7 +63,8 @@
     "AI Gateway Rate Limiting and Cost Control",
     "Building an LLM-Powered Slack Bot with Java",
     "Multimodal LLMs: Processing Images and Documents in Java",
-    "Embeddings Explained: From Theory to pgvector Practice"
+    "Embeddings Explained: From Theory to pgvector Practice",
+    "Guardrails for LLM Applications: Input and Output Validation"
   ],
   "post_dates": []
 }
