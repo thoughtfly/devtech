@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 AI-Powered Blog Post Generator for DevTech Insights
-Generates high-quality English tech blog posts using DeepSeek API.
+Generates high-quality English tech blog posts using the Agnes API.
 Designed to run as a GitHub Actions scheduled job.
 
 Usage:
@@ -26,9 +26,11 @@ import requests
 # ============================================================
 
 # API config - read from environment variables (GitHub Secrets)
-DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
-DEEPSEEK_MODEL = "deepseek-chat"
+# Now backed by Agnes (https://api.agnes-ai.cn). The GitHub Secret is named
+# AGNES_API_KEY (value = the Agnes API key).
+AGNES_API_KEY = os.environ.get("AGNES_API_KEY", "")
+AGNES_API_URL = "https://api.agnes-ai.cn/v1/chat/completions"
+AGNES_MODEL = "agnes-2.0-flash"
 
 # Cover image (v1): Unsplash official API. Falls back to Picsum if no key / API fails.
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
@@ -304,8 +306,8 @@ def get_next_topic(history):
     return topic, history
 
 
-def call_deepseek(topic, api_key, max_retries=3):
-    """Generate a blog post using DeepSeek API with retry logic."""
+def call_agnes(topic, api_key, max_retries=3):
+    """Generate a blog post using the Agnes API with retry logic."""
     system_prompt = """You are an expert technical writer for a software engineering blog. 
 Write high-quality, SEO-optimized blog posts in English.
 
@@ -329,7 +331,9 @@ Return ONLY valid JSON with this structure:
   "tags": ["tag1", "tag2", "tag3"],
   "categories": ["Java"],
   "content": "Full markdown content"
-}"""
+}
+
+IMPORTANT: The JSON must be strictly valid and parseable. Inside string values, escape newlines as \\n and double quotes as \\". Do not use literal line breaks inside JSON strings."""
 
     user_prompt = f"Write a detailed technical blog post about: {topic}"
 
@@ -338,19 +342,19 @@ Return ONLY valid JSON with this structure:
     for attempt in range(1, max_retries + 1):
         try:
             resp = session.post(
-                DEEPSEEK_API_URL,
+                AGNES_API_URL,
                 headers={
                     "Authorization": f"Bearer {api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": DEEPSEEK_MODEL,
+                    "model": AGNES_MODEL,
                     "messages": [
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt}
                     ],
                     "temperature": 0.7,
-                    "max_tokens": 4000
+                    "max_tokens": 8000
                 },
                 timeout=300
             )
@@ -572,9 +576,9 @@ def main():
     parser.add_argument("--topic", type=str, help="Specific topic to write about")
     args = parser.parse_args()
 
-    if not DEEPSEEK_API_KEY:
-        print("[ERROR] DEEPSEEK_API_KEY environment variable not set!")
-        print("Set it locally or add it to GitHub Secrets as DEEPSEEK_API_KEY")
+    if not AGNES_API_KEY:
+        print("[ERROR] AGNES_API_KEY environment variable not set!")
+        print("Set it locally or add it to GitHub Secrets as AGNES_API_KEY")
         sys.exit(1)
 
     print(f"=== DevTech Blog Post Generator ===")
@@ -594,9 +598,9 @@ def main():
             topic, history = get_next_topic(history)
 
         print(f"Topic: {topic}")
-        print("Calling DeepSeek API...")
+        print("Calling Agnes API...")
 
-        post_data = call_deepseek(topic, DEEPSEEK_API_KEY)
+        post_data = call_agnes(topic, AGNES_API_KEY)
         if not post_data:
             print(f"[FAILED] Could not generate post for: {topic}")
             continue
