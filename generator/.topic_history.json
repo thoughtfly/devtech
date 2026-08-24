@@ -65,7 +65,8 @@
     "Multimodal LLMs: Processing Images and Documents in Java",
     "Embeddings Explained: From Theory to pgvector Practice",
     "Guardrails for LLM Applications: Input and Output Validation",
-    "Building a Semantic Cache for LLM Calls with Redis"
+    "Building a Semantic Cache for LLM Calls with Redis",
+    "Model Context Protocol (MCP): What Backend Devs Need to Know"
   ],
   "post_dates": []
 }
