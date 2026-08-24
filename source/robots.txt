@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thoughtfly.github.io/devtech/sitemap.xml

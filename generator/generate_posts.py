@@ -50,6 +50,53 @@ HISTORY_FILE = BLOG_ROOT / "generator" / ".topic_history.json"
 # ============================================================
 
 TOPICS = [
+    # ============================================================
+    # [NEW] 高优先级新鲜选题（2025-2026）—— 置于列表最前，优先被生成器采用
+    # ============================================================
+
+    # === [NEW] AI Agents & LLMOps (2025-2026) ===
+    "Agentic RAG: Combining Retrieval with Autonomous Agents",
+    "Building Multi-Agent Systems with LangGraph and Java",
+    "LLM Observability: Tracing, Evaluations, and Langfuse Deep Dive",
+    "Prompt Caching Strategies: Reducing Token Cost and Latency",
+    "Building Reliable Tool Calling for LLM Agents",
+    "LLM Routing and Model Selection: Smart Gateways for Cost and Quality",
+    "Regression Testing for LLM Outputs: Catching Quality Drift",
+    "Content Moderation and Safety Filters for LLM Apps",
+    "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM",
+    "Distilling and Quantizing LLMs for Edge and On-Prem Deployment",
+    "Hybrid Search: Combining Vector and Keyword Retrieval for RAG",
+    "GraphRAG: Using Knowledge Graphs to Improve LLM Answers",
+    "Hands-On: Building MCP Servers and Clients in Java",
+    "Prompt Versioning and A/B Testing for LLM Features",
+    "LLMOps: CI/CD, Evaluation, and Monitoring for AI Applications",
+    "PII Detection and Redaction in LLM-Powered Applications",
+    "Structured Output and JSON Mode for Reliable LLM Integrations",
+    "Agent Memory Architectures: Short-Term, Long-Term, and Episodic",
+    "Tool-Use Frameworks for Java: From Function Calling to Agents",
+    "RAG Evaluation Metrics: Faithfulness, Relevance, and Hallucination",
+    "Building a Coding Assistant Backend with Java and LLMs",
+
+    # === [NEW] Java 24/25 & Spring 6/7 / Native Images ===
+    "What's New in Java 24: Stream Gatherers, Scoped Values, and More",
+    "Java 25 Preview: Features Backend Developers Should Watch",
+    "Spring Boot 4 and Spring Framework 7: What's Changing in 2026",
+    "Building Native Images with Spring Boot and GraalVM",
+    "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint",
+    "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide",
+    "R2DBC and Reactive Relational Access in Spring Boot",
+    "Spring Authorization Server: OAuth2 and OIDC from Scratch",
+    "Spring Cloud 2025: Service Discovery, Config, and Resilience",
+    "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs",
+    "jOOQ vs Hibernate: When to Use SQL-First Data Access",
+    "Quarkus vs Spring Boot: Choosing a Java Framework in 2026",
+    "Java Flight Recorder (JFR): Production Diagnostics Without Overhead",
+    "Spring AOT and Native Image: Solving Reflection and Proxy Pitfalls",
+    "Building gRPC Services with Java and Spring Boot",
+    "Spring Batch for Large-Scale Data Processing Pipelines",
+    "Spring Integration: Enterprise Integration Patterns in Practice",
+    "Helidon and Micronaut: Lightweight Alternatives to Spring Boot",
+
     # === Java & Spring Boot ===
     "How to Build a REST API with Spring Boot 3 and Java 21",
     "Spring Boot 3 Virtual Threads: A Practical Performance Guide",
@@ -262,6 +309,98 @@ TOPICS = [
     "Kubernetes Networking for Backend Devs",
     "StatefulSets for Stateful Java Workloads",
     "Cost-Effective Kubernetes for Side Projects",
+
+    # ============================================================
+    # [NEW] 补充选题 —— 追加于列表末尾，进一步拉长资源池跑道
+    # ============================================================
+
+    # === [NEW] System Design Deep-Dives (Interview-Style) ===
+    "System Design Interview: Design a Rate Limiter",
+    "System Design Interview: Design a Distributed Message Queue",
+    "System Design Interview: Design a Notification Service",
+    "System Design Interview: Design a Search Autocomplete",
+    "System Design Interview: Design a Payment System",
+    "System Design Interview: Design a Collaborative Real-Time Editor",
+    "System Design Interview: Design a Metrics and Monitoring Platform",
+    "Consistent Hashing Explained: Scaling Distributed Caches",
+    "Raft and Paxos: Understanding Distributed Consensus",
+    "Distributed Locks: Redlock, ZooKeeper, and Etcd Patterns",
+    "Bloom Filters and Count-Min Sketch in Large-Scale Systems",
+    "Event Sourcing in Practice: Lessons and Pitfalls",
+    "Designing a Distributed Rate Limiter with Redis and Lua",
+    "Caching Strategies: Cache-Aside, Write-Through, and Write-Behind",
+
+    # === [NEW] Data Engineering & Modern Databases ===
+    "CockroachDB and TiDB: Distributed SQL for Java Apps",
+    "ClickHouse for Analytics: A Java Developer's Introduction",
+    "Neo4j and Graph Databases: When Relationships Matter",
+    "Amazon DynamoDB Data Modeling for Java Backends",
+    "ScyllaDB and Cassandra: Wide-Column at Scale",
+    "Change Data Capture Patterns with Debezium Deep Dive",
+    "Materialized Views and Incremental Computation in Postgres",
+    "Database Sharding with Vitess: Scaling MySQL Horizontally",
+    "Vector Index Tuning: HNSW vs IVF in pgvector and Beyond",
+
+    # === [NEW] Observability, SRE & FinOps ===
+    "SLOs, SLIs, and Error Budgets: A Practical SRE Guide",
+    "OpenTelemetry Collector: Pipelines and Best Practices",
+    "Distributed Tracing in Practice: From Spans to Insights",
+    "Incident Response and Postmortems for Backend Teams",
+    "FinOps for Engineering: Cutting Cloud Spend Without Breaking Things",
+    "Karpenter and Cluster Autoscaling for Kubernetes Cost Savings",
+    "eBPF for Java Developers: Observability Beyond the JVM",
+    "Chaos Engineering with Litmus and Chaos Mesh",
+    "On-Call Rotations and Alerting That Doesn't Burn People Out",
+    "Progressive Delivery with Argo Rollouts and Flagger",
+
+    # === [NEW] Security: Zero Trust & API Security ===
+    "OWASP API Security Top 10: Protecting Your Endpoints",
+    "Zero Trust Architecture for Microservices",
+    "mTLS and SPIFFE/SPIRE: Securing Service-to-Service Traffic",
+    "Secrets Rotation and Management in Spring Boot",
+    "Threat Modeling for Backend Applications",
+    "Software Supply Chain Security: SBOM, Signing, and Provenance",
+    "Fuzzing Java Applications to Find Hidden Bugs",
+    "Rate Limiting and WAF Strategies to Stop API Abuse",
+
+    # === [NEW] Advanced Testing & Quality ===
+    "API Testing with REST Assured and Testcontainers",
+    "Chaos Testing Microservices: Breaking Things on Purpose",
+    "Test Data Management for Reliable CI Pipelines",
+    "Visual and Snapshot Testing for API Contracts",
+    "Load and Performance Testing with k6: A Java Backend Guide",
+    "Managing Flaky Tests: A Strategy for Stable CI",
+    "Contract Testing with Spring Cloud Contract in Depth",
+    "Property-Based Testing Patterns for Robust Java Code",
+
+    # === [NEW] Streaming & Messaging Deep-Dives ===
+    "Apache Kafka Deep Dive: Tiered Storage and Consumer Lag",
+    "NATS vs Kafka vs Pulsar: Choosing Your Messaging Backbone",
+    "Amazon SQS and SNS for Java: Building Resilient Pipelines",
+    "Redpanda: A Kafka-Compatible Engine Without ZooKeeper",
+    "Kafka Transactions and Exactly-Once Processing in Practice",
+    "RabbitMQ Quorum Queues: Durable Messaging Done Right",
+    "Google Pub/Sub and Azure Service Bus for Java Backends",
+    "Dead Letter Queues and Poison Pill Handling in Production",
+
+    # === [NEW] Cloud Native & Edge ===
+    "Dapr: Building Portable Microservices with Building Blocks",
+    "KEDA: Event-Driven Autoscaling for Kubernetes",
+    "Knative and Serverless Java: Scale-to-Zero in Practice",
+    "WebAssembly (WASM) in the Cloud Native Stack",
+    "Building Edge Services with Java and GraalVM Native Image",
+    "Vertical Pod Autoscaling and Right-Sizing Java Workloads",
+    "Service Mesh in Production: Traffic Management and mTLS",
+
+    # === [NEW] Engineering Leadership & Career ===
+    "From Senior to Staff Engineer: What Actually Changes",
+    "Writing Effective Design Docs and RFCs",
+    "Tech Lead Survival Guide: Balancing Code and People",
+    "Mentoring Junior Developers: A Practical Framework",
+    "Running Effective Technical Interviews for Backend Roles",
+    "Managing Technical Debt Without Killing Velocity",
+    "The RFC Process: How to Drive Decisions Across Teams",
+    "On-Call and Reliability Culture: Lessons from Mature Orgs",
 ]
 
 # ============================================================
