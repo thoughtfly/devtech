@@ -67,7 +67,8 @@
     "Guardrails for LLM Applications: Input and Output Validation",
     "Building a Semantic Cache for LLM Calls with Redis",
     "Model Context Protocol (MCP): What Backend Devs Need to Know",
-    "Self-Hosting Open-Source LLMs: Cost-Benefit Analysis"
+    "Self-Hosting Open-Source LLMs: Cost-Benefit Analysis",
+    "Agentic RAG: Combining Retrieval with Autonomous Agents"
   ],
   "post_dates": []
 }
