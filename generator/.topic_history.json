@@ -68,7 +68,8 @@
     "Building a Semantic Cache for LLM Calls with Redis",
     "Model Context Protocol (MCP): What Backend Devs Need to Know",
     "Self-Hosting Open-Source LLMs: Cost-Benefit Analysis",
-    "Agentic RAG: Combining Retrieval with Autonomous Agents"
+    "Agentic RAG: Combining Retrieval with Autonomous Agents",
+    "Building Multi-Agent Systems with LangGraph and Java"
   ],
   "post_dates": []
 }
