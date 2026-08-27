@@ -69,7 +69,8 @@
     "Model Context Protocol (MCP): What Backend Devs Need to Know",
     "Self-Hosting Open-Source LLMs: Cost-Benefit Analysis",
     "Agentic RAG: Combining Retrieval with Autonomous Agents",
-    "Building Multi-Agent Systems with LangGraph and Java"
+    "Building Multi-Agent Systems with LangGraph and Java",
+    "LLM Observability: Tracing, Evaluations, and Langfuse Deep Dive"
   ],
   "post_dates": []
 }
