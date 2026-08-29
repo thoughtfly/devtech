@@ -71,7 +71,8 @@
     "Agentic RAG: Combining Retrieval with Autonomous Agents",
     "Building Multi-Agent Systems with LangGraph and Java",
     "LLM Observability: Tracing, Evaluations, and Langfuse Deep Dive",
-    "Prompt Caching Strategies: Reducing Token Cost and Latency"
+    "Prompt Caching Strategies: Reducing Token Cost and Latency",
+    "Building Reliable Tool Calling for LLM Agents"
   ],
   "post_dates": []
 }
