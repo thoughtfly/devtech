@@ -72,7 +72,8 @@
     "Building Multi-Agent Systems with LangGraph and Java",
     "LLM Observability: Tracing, Evaluations, and Langfuse Deep Dive",
     "Prompt Caching Strategies: Reducing Token Cost and Latency",
-    "Building Reliable Tool Calling for LLM Agents"
+    "Building Reliable Tool Calling for LLM Agents",
+    "LLM Routing and Model Selection: Smart Gateways for Cost and Quality"
   ],
   "post_dates": []
 }
