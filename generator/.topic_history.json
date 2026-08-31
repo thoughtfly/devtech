@@ -73,7 +73,8 @@
     "LLM Observability: Tracing, Evaluations, and Langfuse Deep Dive",
     "Prompt Caching Strategies: Reducing Token Cost and Latency",
     "Building Reliable Tool Calling for LLM Agents",
-    "LLM Routing and Model Selection: Smart Gateways for Cost and Quality"
+    "LLM Routing and Model Selection: Smart Gateways for Cost and Quality",
+    "Regression Testing for LLM Outputs: Catching Quality Drift"
   ],
   "post_dates": []
 }
