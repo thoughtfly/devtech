@@ -75,7 +75,8 @@
     "Building Reliable Tool Calling for LLM Agents",
     "LLM Routing and Model Selection: Smart Gateways for Cost and Quality",
     "Regression Testing for LLM Outputs: Catching Quality Drift",
-    "Content Moderation and Safety Filters for LLM Apps"
+    "Content Moderation and Safety Filters for LLM Apps",
+    "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM"
   ],
   "post_dates": []
 }
