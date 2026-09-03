@@ -76,7 +76,8 @@
     "LLM Routing and Model Selection: Smart Gateways for Cost and Quality",
     "Regression Testing for LLM Outputs: Catching Quality Drift",
     "Content Moderation and Safety Filters for LLM Apps",
-    "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM"
+    "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM",
+    "Distilling and Quantizing LLMs for Edge and On-Prem Deployment"
   ],
   "post_dates": []
 }
