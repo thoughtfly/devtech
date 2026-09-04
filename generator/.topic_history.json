@@ -77,7 +77,8 @@
     "Regression Testing for LLM Outputs: Catching Quality Drift",
     "Content Moderation and Safety Filters for LLM Apps",
     "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM",
-    "Distilling and Quantizing LLMs for Edge and On-Prem Deployment"
+    "Distilling and Quantizing LLMs for Edge and On-Prem Deployment",
+    "Hybrid Search: Combining Vector and Keyword Retrieval for RAG"
   ],
   "post_dates": []
 }
