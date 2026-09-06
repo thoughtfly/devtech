@@ -79,7 +79,8 @@
     "Small Language Models (SLMs): When to Use Phi, Gemma, and MiniCPM",
     "Distilling and Quantizing LLMs for Edge and On-Prem Deployment",
     "Hybrid Search: Combining Vector and Keyword Retrieval for RAG",
-    "GraphRAG: Using Knowledge Graphs to Improve LLM Answers"
+    "GraphRAG: Using Knowledge Graphs to Improve LLM Answers",
+    "Hands-On: Building MCP Servers and Clients in Java"
   ],
   "post_dates": []
 }
