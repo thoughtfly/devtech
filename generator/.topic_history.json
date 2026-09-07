@@ -80,7 +80,8 @@
     "Distilling and Quantizing LLMs for Edge and On-Prem Deployment",
     "Hybrid Search: Combining Vector and Keyword Retrieval for RAG",
     "GraphRAG: Using Knowledge Graphs to Improve LLM Answers",
-    "Hands-On: Building MCP Servers and Clients in Java"
+    "Hands-On: Building MCP Servers and Clients in Java",
+    "Prompt Versioning and A/B Testing for LLM Features"
   ],
   "post_dates": []
 }
