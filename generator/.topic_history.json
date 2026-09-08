@@ -81,7 +81,8 @@
     "Hybrid Search: Combining Vector and Keyword Retrieval for RAG",
     "GraphRAG: Using Knowledge Graphs to Improve LLM Answers",
     "Hands-On: Building MCP Servers and Clients in Java",
-    "Prompt Versioning and A/B Testing for LLM Features"
+    "Prompt Versioning and A/B Testing for LLM Features",
+    "LLMOps: CI/CD, Evaluation, and Monitoring for AI Applications"
   ],
   "post_dates": []
 }
