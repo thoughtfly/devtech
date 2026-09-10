@@ -83,7 +83,8 @@
     "Hands-On: Building MCP Servers and Clients in Java",
     "Prompt Versioning and A/B Testing for LLM Features",
     "LLMOps: CI/CD, Evaluation, and Monitoring for AI Applications",
-    "PII Detection and Redaction in LLM-Powered Applications"
+    "PII Detection and Redaction in LLM-Powered Applications",
+    "Structured Output and JSON Mode for Reliable LLM Integrations"
   ],
   "post_dates": []
 }
