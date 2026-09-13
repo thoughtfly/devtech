@@ -86,7 +86,8 @@
     "PII Detection and Redaction in LLM-Powered Applications",
     "Structured Output and JSON Mode for Reliable LLM Integrations",
     "Agent Memory Architectures: Short-Term, Long-Term, and Episodic",
-    "Tool-Use Frameworks for Java: From Function Calling to Agents"
+    "Tool-Use Frameworks for Java: From Function Calling to Agents",
+    "RAG Evaluation Metrics: Faithfulness, Relevance, and Hallucination"
   ],
   "post_dates": []
 }
