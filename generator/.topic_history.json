@@ -88,7 +88,8 @@
     "Agent Memory Architectures: Short-Term, Long-Term, and Episodic",
     "Tool-Use Frameworks for Java: From Function Calling to Agents",
     "RAG Evaluation Metrics: Faithfulness, Relevance, and Hallucination",
-    "Building a Coding Assistant Backend with Java and LLMs"
+    "Building a Coding Assistant Backend with Java and LLMs",
+    "What's New in Java 24: Stream Gatherers, Scoped Values, and More"
   ],
   "post_dates": []
 }
