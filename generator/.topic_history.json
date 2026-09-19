@@ -92,7 +92,8 @@
     "What's New in Java 24: Stream Gatherers, Scoped Values, and More",
     "Java 25 Preview: Features Backend Developers Should Watch",
     "Spring Boot 4 and Spring Framework 7: What's Changing in 2026",
-    "Building Native Images with Spring Boot and GraalVM"
+    "Building Native Images with Spring Boot and GraalVM",
+    "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint"
   ],
   "post_dates": []
 }
