@@ -93,7 +93,8 @@
     "Java 25 Preview: Features Backend Developers Should Watch",
     "Spring Boot 4 and Spring Framework 7: What's Changing in 2026",
     "Building Native Images with Spring Boot and GraalVM",
-    "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint"
+    "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint",
+    "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide"
   ],
   "post_dates": []
 }
