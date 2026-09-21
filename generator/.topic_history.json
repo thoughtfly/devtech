@@ -94,7 +94,8 @@
     "Spring Boot 4 and Spring Framework 7: What's Changing in 2026",
     "Building Native Images with Spring Boot and GraalVM",
     "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint",
-    "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide"
+    "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide",
+    "R2DBC and Reactive Relational Access in Spring Boot"
   ],
   "post_dates": []
 }
