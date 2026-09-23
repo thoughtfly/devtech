@@ -96,7 +96,8 @@
     "CRaC: Cutting Spring Boot Startup Time with Coordinated Restore at Checkpoint",
     "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide",
     "R2DBC and Reactive Relational Access in Spring Boot",
-    "Spring Authorization Server: OAuth2 and OIDC from Scratch"
+    "Spring Authorization Server: OAuth2 and OIDC from Scratch",
+    "Spring Cloud 2025: Service Discovery, Config, and Resilience"
   ],
   "post_dates": []
 }
