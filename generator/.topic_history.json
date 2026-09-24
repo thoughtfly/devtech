@@ -97,7 +97,8 @@
     "Migrating Blocking Code to Virtual Threads: A Step-by-Step Guide",
     "R2DBC and Reactive Relational Access in Spring Boot",
     "Spring Authorization Server: OAuth2 and OIDC from Scratch",
-    "Spring Cloud 2025: Service Discovery, Config, and Resilience"
+    "Spring Cloud 2025: Service Discovery, Config, and Resilience",
+    "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs"
   ],
   "post_dates": []
 }
