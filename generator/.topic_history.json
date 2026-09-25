@@ -98,7 +98,8 @@
     "R2DBC and Reactive Relational Access in Spring Boot",
     "Spring Authorization Server: OAuth2 and OIDC from Scratch",
     "Spring Cloud 2025: Service Discovery, Config, and Resilience",
-    "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs"
+    "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs",
+    "jOOQ vs Hibernate: When to Use SQL-First Data Access"
   ],
   "post_dates": []
 }
