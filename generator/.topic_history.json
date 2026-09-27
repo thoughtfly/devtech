@@ -100,7 +100,8 @@
     "Spring Cloud 2025: Service Discovery, Config, and Resilience",
     "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs",
     "jOOQ vs Hibernate: When to Use SQL-First Data Access",
-    "Quarkus vs Spring Boot: Choosing a Java Framework in 2026"
+    "Quarkus vs Spring Boot: Choosing a Java Framework in 2026",
+    "Java Flight Recorder (JFR): Production Diagnostics Without Overhead"
   ],
   "post_dates": []
 }
