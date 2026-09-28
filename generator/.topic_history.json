@@ -101,7 +101,8 @@
     "MapStruct vs Manual Mappers: Reducing Boilerplate in Java DTOs",
     "jOOQ vs Hibernate: When to Use SQL-First Data Access",
     "Quarkus vs Spring Boot: Choosing a Java Framework in 2026",
-    "Java Flight Recorder (JFR): Production Diagnostics Without Overhead"
+    "Java Flight Recorder (JFR): Production Diagnostics Without Overhead",
+    "Spring AOT and Native Image: Solving Reflection and Proxy Pitfalls"
   ],
   "post_dates": []
 }
