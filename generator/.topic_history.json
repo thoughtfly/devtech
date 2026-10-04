@@ -107,7 +107,8 @@
     "Spring Batch for Large-Scale Data Processing Pipelines",
     "Spring Integration: Enterprise Integration Patterns in Practice",
     "Helidon and Micronaut: Lightweight Alternatives to Spring Boot",
-    "Designing Rate Limiting Systems: Token Bucket vs Sliding Window"
+    "Designing Rate Limiting Systems: Token Bucket vs Sliding Window",
+    "Saga Pattern for Distributed Transactions in Microservices"
   ],
   "post_dates": []
 }
