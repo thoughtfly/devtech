@@ -109,7 +109,8 @@
     "Helidon and Micronaut: Lightweight Alternatives to Spring Boot",
     "Designing Rate Limiting Systems: Token Bucket vs Sliding Window",
     "Saga Pattern for Distributed Transactions in Microservices",
-    "Backend for Frontend (BFF) Pattern: When to Use It"
+    "Backend for Frontend (BFF) Pattern: When to Use It",
+    "Designing a Multi-Tenant SaaS Architecture"
   ],
   "post_dates": []
 }
