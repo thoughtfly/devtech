@@ -110,7 +110,8 @@
     "Designing Rate Limiting Systems: Token Bucket vs Sliding Window",
     "Saga Pattern for Distributed Transactions in Microservices",
     "Backend for Frontend (BFF) Pattern: When to Use It",
-    "Designing a Multi-Tenant SaaS Architecture"
+    "Designing a Multi-Tenant SaaS Architecture",
+    "Strangler Fig Pattern: Migrating Monolith to Microservices"
   ],
   "post_dates": []
 }
