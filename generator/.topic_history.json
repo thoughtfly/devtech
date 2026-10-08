@@ -111,7 +111,8 @@
     "Saga Pattern for Distributed Transactions in Microservices",
     "Backend for Frontend (BFF) Pattern: When to Use It",
     "Designing a Multi-Tenant SaaS Architecture",
-    "Strangler Fig Pattern: Migrating Monolith to Microservices"
+    "Strangler Fig Pattern: Migrating Monolith to Microservices",
+    "Choosing Between SQL and NoSQL: A Decision Framework"
   ],
   "post_dates": []
 }
