@@ -112,7 +112,8 @@
     "Backend for Frontend (BFF) Pattern: When to Use It",
     "Designing a Multi-Tenant SaaS Architecture",
     "Strangler Fig Pattern: Migrating Monolith to Microservices",
-    "Choosing Between SQL and NoSQL: A Decision Framework"
+    "Choosing Between SQL and NoSQL: A Decision Framework",
+    "Designing Idempotency Keys for Safe Retries"
   ],
   "post_dates": []
 }
