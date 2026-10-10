@@ -113,7 +113,8 @@
     "Designing a Multi-Tenant SaaS Architecture",
     "Strangler Fig Pattern: Migrating Monolith to Microservices",
     "Choosing Between SQL and NoSQL: A Decision Framework",
-    "Designing Idempotency Keys for Safe Retries"
+    "Designing Idempotency Keys for Safe Retries",
+    "Designing a Real-Time Chat System: Architecture Deep Dive"
   ],
   "post_dates": []
 }
