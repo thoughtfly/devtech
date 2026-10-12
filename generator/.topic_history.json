@@ -115,7 +115,8 @@
     "Choosing Between SQL and NoSQL: A Decision Framework",
     "Designing Idempotency Keys for Safe Retries",
     "Designing a Real-Time Chat System: Architecture Deep Dive",
-    "Outbox Pattern: Reliable Event Publishing from Databases"
+    "Outbox Pattern: Reliable Event Publishing from Databases",
+    "Leader Election in Distributed Systems: Algorithms and Trade-offs"
   ],
   "post_dates": []
 }
