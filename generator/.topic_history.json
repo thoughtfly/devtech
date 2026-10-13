@@ -116,7 +116,8 @@
     "Designing Idempotency Keys for Safe Retries",
     "Designing a Real-Time Chat System: Architecture Deep Dive",
     "Outbox Pattern: Reliable Event Publishing from Databases",
-    "Leader Election in Distributed Systems: Algorithms and Trade-offs"
+    "Leader Election in Distributed Systems: Algorithms and Trade-offs",
+    "GitHub Actions CI/CD Pipeline for Spring Boot Microservices"
   ],
   "post_dates": []
 }
