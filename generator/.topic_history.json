@@ -117,7 +117,8 @@
     "Designing a Real-Time Chat System: Architecture Deep Dive",
     "Outbox Pattern: Reliable Event Publishing from Databases",
     "Leader Election in Distributed Systems: Algorithms and Trade-offs",
-    "GitHub Actions CI/CD Pipeline for Spring Boot Microservices"
+    "GitHub Actions CI/CD Pipeline for Spring Boot Microservices",
+    "Containerizing Spring Boot Applications: From Docker to Kubernetes"
   ],
   "post_dates": []
 }
