@@ -119,7 +119,8 @@
     "Leader Election in Distributed Systems: Algorithms and Trade-offs",
     "GitHub Actions CI/CD Pipeline for Spring Boot Microservices",
     "Containerizing Spring Boot Applications: From Docker to Kubernetes",
-    "Monitoring Java Applications with Prometheus and Grafana"
+    "Monitoring Java Applications with Prometheus and Grafana",
+    "Terraform vs Pulumi: Infrastructure as Code for Java Teams"
   ],
   "post_dates": []
 }
