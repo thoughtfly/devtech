@@ -120,7 +120,8 @@
     "GitHub Actions CI/CD Pipeline for Spring Boot Microservices",
     "Containerizing Spring Boot Applications: From Docker to Kubernetes",
     "Monitoring Java Applications with Prometheus and Grafana",
-    "Terraform vs Pulumi: Infrastructure as Code for Java Teams"
+    "Terraform vs Pulumi: Infrastructure as Code for Java Teams",
+    "Zero-Downtime Deployments for Spring Boot Applications"
   ],
   "post_dates": []
 }
