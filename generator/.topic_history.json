@@ -121,7 +121,8 @@
     "Containerizing Spring Boot Applications: From Docker to Kubernetes",
     "Monitoring Java Applications with Prometheus and Grafana",
     "Terraform vs Pulumi: Infrastructure as Code for Java Teams",
-    "Zero-Downtime Deployments for Spring Boot Applications"
+    "Zero-Downtime Deployments for Spring Boot Applications",
+    "Kubernetes for Java Developers: A Practical Guide"
   ],
   "post_dates": []
 }
