@@ -123,7 +123,8 @@
     "Terraform vs Pulumi: Infrastructure as Code for Java Teams",
     "Zero-Downtime Deployments for Spring Boot Applications",
     "Kubernetes for Java Developers: A Practical Guide",
-    "Docker Compose for Local Spring Boot Development"
+    "Docker Compose for Local Spring Boot Development",
+    "Helm Charts for Spring Boot: Package and Deploy to Kubernetes"
   ],
   "post_dates": []
 }
