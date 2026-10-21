@@ -124,7 +124,8 @@
     "Zero-Downtime Deployments for Spring Boot Applications",
     "Kubernetes for Java Developers: A Practical Guide",
     "Docker Compose for Local Spring Boot Development",
-    "Helm Charts for Spring Boot: Package and Deploy to Kubernetes"
+    "Helm Charts for Spring Boot: Package and Deploy to Kubernetes",
+    "Git Workflows for Teams: GitFlow vs Trunk-Based Development"
   ],
   "post_dates": []
 }
