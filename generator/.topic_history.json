@@ -125,7 +125,8 @@
     "Kubernetes for Java Developers: A Practical Guide",
     "Docker Compose for Local Spring Boot Development",
     "Helm Charts for Spring Boot: Package and Deploy to Kubernetes",
-    "Git Workflows for Teams: GitFlow vs Trunk-Based Development"
+    "Git Workflows for Teams: GitFlow vs Trunk-Based Development",
+    "Cloud Cost Optimization for Java Microservices"
   ],
   "post_dates": []
 }
