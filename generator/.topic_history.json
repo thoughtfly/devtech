@@ -126,7 +126,8 @@
     "Docker Compose for Local Spring Boot Development",
     "Helm Charts for Spring Boot: Package and Deploy to Kubernetes",
     "Git Workflows for Teams: GitFlow vs Trunk-Based Development",
-    "Cloud Cost Optimization for Java Microservices"
+    "Cloud Cost Optimization for Java Microservices",
+    "Building a Multi-Environment CI/CD Pipeline with GitHub Actions"
   ],
   "post_dates": []
 }
