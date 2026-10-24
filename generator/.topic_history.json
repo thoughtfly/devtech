@@ -127,7 +127,8 @@
     "Helm Charts for Spring Boot: Package and Deploy to Kubernetes",
     "Git Workflows for Teams: GitFlow vs Trunk-Based Development",
     "Cloud Cost Optimization for Java Microservices",
-    "Building a Multi-Environment CI/CD Pipeline with GitHub Actions"
+    "Building a Multi-Environment CI/CD Pipeline with GitHub Actions",
+    "Service Mesh with Istio: When Do You Need It?"
   ],
   "post_dates": []
 }
