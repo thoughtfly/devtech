@@ -128,7 +128,8 @@
     "Git Workflows for Teams: GitFlow vs Trunk-Based Development",
     "Cloud Cost Optimization for Java Microservices",
     "Building a Multi-Environment CI/CD Pipeline with GitHub Actions",
-    "Service Mesh with Istio: When Do You Need It?"
+    "Service Mesh with Istio: When Do You Need It?",
+    "Blue-Green vs Canary Deployments: A Practical Comparison"
   ],
   "post_dates": []
 }
