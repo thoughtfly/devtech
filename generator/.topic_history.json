@@ -131,7 +131,8 @@
     "Service Mesh with Istio: When Do You Need It?",
     "Blue-Green vs Canary Deployments: A Practical Comparison",
     "GitHub Actions Caching: Speed Up Your CI Pipeline",
-    "Infrastructure as Code with OpenTofu"
+    "Infrastructure as Code with OpenTofu",
+    "Observability 101: Logs, Metrics, and Traces"
   ],
   "post_dates": []
 }
