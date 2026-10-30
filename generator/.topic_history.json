@@ -133,7 +133,8 @@
     "GitHub Actions Caching: Speed Up Your CI Pipeline",
     "Infrastructure as Code with OpenTofu",
     "Observability 101: Logs, Metrics, and Traces",
-    "Building a GitOps Workflow with ArgoCD"
+    "Building a GitOps Workflow with ArgoCD",
+    "AWS Lambda for Java: Cold Starts and Optimization"
   ],
   "post_dates": []
 }
