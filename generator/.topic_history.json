@@ -135,7 +135,8 @@
     "Observability 101: Logs, Metrics, and Traces",
     "Building a GitOps Workflow with ArgoCD",
     "AWS Lambda for Java: Cold Starts and Optimization",
-    "Container Security Best Practices for Spring Boot"
+    "Container Security Best Practices for Spring Boot",
+    "Multi-Region Deployment Strategies for Java Apps"
   ],
   "post_dates": []
 }
