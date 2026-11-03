@@ -137,7 +137,8 @@
     "AWS Lambda for Java: Cold Starts and Optimization",
     "Container Security Best Practices for Spring Boot",
     "Multi-Region Deployment Strategies for Java Apps",
-    "Observability with OpenTelemetry and Tempo"
+    "Observability with OpenTelemetry and Tempo",
+    "Chaos Engineering for Java Microservices"
   ],
   "post_dates": []
 }
