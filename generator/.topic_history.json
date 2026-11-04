@@ -138,7 +138,8 @@
     "Container Security Best Practices for Spring Boot",
     "Multi-Region Deployment Strategies for Java Apps",
     "Observability with OpenTelemetry and Tempo",
-    "Chaos Engineering for Java Microservices"
+    "Chaos Engineering for Java Microservices",
+    "JVM Performance Tuning: Garbage Collection Strategies in 2026"
   ],
   "post_dates": []
 }
