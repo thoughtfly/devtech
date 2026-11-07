@@ -141,7 +141,8 @@
     "Chaos Engineering for Java Microservices",
     "JVM Performance Tuning: Garbage Collection Strategies in 2026",
     "Optimizing Database Queries in Spring Boot with Hibernate 6",
-    "Caching Strategies for High-Performance Java Applications"
+    "Caching Strategies for High-Performance Java Applications",
+    "Profiling Spring Boot Applications with Async Profiler"
   ],
   "post_dates": []
 }
