@@ -142,7 +142,8 @@
     "JVM Performance Tuning: Garbage Collection Strategies in 2026",
     "Optimizing Database Queries in Spring Boot with Hibernate 6",
     "Caching Strategies for High-Performance Java Applications",
-    "Profiling Spring Boot Applications with Async Profiler"
+    "Profiling Spring Boot Applications with Async Profiler",
+    "Reducing Docker Image Size for Spring Boot: From 500MB to 100MB"
   ],
   "post_dates": []
 }
