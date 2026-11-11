@@ -144,7 +144,8 @@
     "Caching Strategies for High-Performance Java Applications",
     "Profiling Spring Boot Applications with Async Profiler",
     "Reducing Docker Image Size for Spring Boot: From 500MB to 100MB",
-    "Connection Pool Tuning: HikariCP Best Practices"
+    "Connection Pool Tuning: HikariCP Best Practices",
+    "Optimizing JPA Performance: N+1 Queries, Fetch Strategies, and Batching"
   ],
   "post_dates": []
 }
