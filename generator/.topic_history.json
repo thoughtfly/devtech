@@ -146,7 +146,8 @@
     "Reducing Docker Image Size for Spring Boot: From 500MB to 100MB",
     "Connection Pool Tuning: HikariCP Best Practices",
     "Optimizing JPA Performance: N+1 Queries, Fetch Strategies, and Batching",
-    "Java Memory Leaks: Detection and Prevention"
+    "Java Memory Leaks: Detection and Prevention",
+    "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads"
   ],
   "post_dates": []
 }
