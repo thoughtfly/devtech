@@ -147,7 +147,8 @@
     "Connection Pool Tuning: HikariCP Best Practices",
     "Optimizing JPA Performance: N+1 Queries, Fetch Strategies, and Batching",
     "Java Memory Leaks: Detection and Prevention",
-    "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads"
+    "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads",
+    "Indexing Strategies for MySQL and PostgreSQL"
   ],
   "post_dates": []
 }
