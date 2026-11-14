@@ -148,7 +148,8 @@
     "Optimizing JPA Performance: N+1 Queries, Fetch Strategies, and Batching",
     "Java Memory Leaks: Detection and Prevention",
     "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads",
-    "Indexing Strategies for MySQL and PostgreSQL"
+    "Indexing Strategies for MySQL and PostgreSQL",
+    "Load Testing Spring Boot Applications with k6 and Gatling"
   ],
   "post_dates": []
 }
