@@ -149,7 +149,8 @@
     "Java Memory Leaks: Detection and Prevention",
     "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads",
     "Indexing Strategies for MySQL and PostgreSQL",
-    "Load Testing Spring Boot Applications with k6 and Gatling"
+    "Load Testing Spring Boot Applications with k6 and Gatling",
+    "Spring Boot Startup Time Optimization: A Practical Guide"
   ],
   "post_dates": []
 }
