@@ -150,7 +150,8 @@
     "Spring Boot Performance Benchmark: WebFlux vs MVC vs Virtual Threads",
     "Indexing Strategies for MySQL and PostgreSQL",
     "Load Testing Spring Boot Applications with k6 and Gatling",
-    "Spring Boot Startup Time Optimization: A Practical Guide"
+    "Spring Boot Startup Time Optimization: A Practical Guide",
+    "Off-Heap Memory in Java: When and How"
   ],
   "post_dates": []
 }
