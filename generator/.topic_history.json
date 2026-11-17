@@ -151,7 +151,8 @@
     "Indexing Strategies for MySQL and PostgreSQL",
     "Load Testing Spring Boot Applications with k6 and Gatling",
     "Spring Boot Startup Time Optimization: A Practical Guide",
-    "Off-Heap Memory in Java: When and How"
+    "Off-Heap Memory in Java: When and How",
+    "Benchmarking JVM Garbage Collectors: G1 vs ZGC vs Shenandoah"
   ],
   "post_dates": []
 }
