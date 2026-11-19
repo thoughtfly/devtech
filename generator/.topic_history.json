@@ -153,7 +153,8 @@
     "Spring Boot Startup Time Optimization: A Practical Guide",
     "Off-Heap Memory in Java: When and How",
     "Benchmarking JVM Garbage Collectors: G1 vs ZGC vs Shenandoah",
-    "Database Connection Pool Sizing: A Formula That Works"
+    "Database Connection Pool Sizing: A Formula That Works",
+    "HTTP/2 and HTTP/3 for Java Backends"
   ],
   "post_dates": []
 }
