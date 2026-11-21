@@ -155,7 +155,8 @@
     "Benchmarking JVM Garbage Collectors: G1 vs ZGC vs Shenandoah",
     "Database Connection Pool Sizing: A Formula That Works",
     "HTTP/2 and HTTP/3 for Java Backends",
-    "Async Logging with Log4j2 and AsyncAppender"
+    "Async Logging with Log4j2 and AsyncAppender",
+    "Profiling Memory with Eclipse MAT"
   ],
   "post_dates": []
 }
