@@ -156,7 +156,8 @@
     "Database Connection Pool Sizing: A Formula That Works",
     "HTTP/2 and HTTP/3 for Java Backends",
     "Async Logging with Log4j2 and AsyncAppender",
-    "Profiling Memory with Eclipse MAT"
+    "Profiling Memory with Eclipse MAT",
+    "Reducing P99 Latency in Spring Boot Services"
   ],
   "post_dates": []
 }
