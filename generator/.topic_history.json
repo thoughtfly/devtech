@@ -161,7 +161,8 @@
     "JVM Tuning for Containerized Workloads",
     "MySQL vs PostgreSQL for Java Applications in 2026",
     "Spring Data JPA vs MyBatis: Which One Should You Choose?",
-    "Database Migration with Flyway: Version Control for Your Schema"
+    "Database Migration with Flyway: Version Control for Your Schema",
+    "Redis for Caching in Spring Boot: A Complete Guide"
   ],
   "post_dates": []
 }
